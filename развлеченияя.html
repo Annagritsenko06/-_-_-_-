@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>развлечения</title>
+    <link rel="stylesheet" href="общий.css" />
+    <link rel="stylesheet" href="развлечение.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <nav class="navbar">
+        <a href="главная.html" class="header-link"></a>
+
+        <div class="navbar__top">
+        <h1 class="navbar__title">
+          
+          </h1>
+        <button class="navbar__toggle-btn" onclick="toggleNavbar()">-</button>
+        </div>
+        <ul class="navbar__list">
+            <li class="navbar__item"><a href="онас.html">О нас</a></li>
+            <li class="navbar__item"><a href="развлеченияя.html">Развлечения</a></li> 
+            <li class="navbar__item"><a href="новости.html">Новости</a></li>
+            <li class="navbar__item"><a href="фотогалерея.html">Фотогалерея</a></li>
+            <li class="navbar__item"><a href="наши_центры.html">Наши центры</a></li>
+            <li class="navbar__item"><a href="registrarion.html">Регистрация</a></li>
+        </ul>
+        </nav>
+        <script>
+            function toggleNavbar() {
+                        const navbarList = document.querySelector('.navbar__list');
+                        const toggleBtn = document.querySelector('.navbar__toggle-btn');
+                        navbarList.classList.toggle('hidden');
+            
+                        if (navbarList.classList.contains('hidden')) {
+                            toggleBtn.innerHTML = "☰"; 
+                        } else {
+                            toggleBtn.innerHTML = "-"; 
+                        }
+                    }
+                    document.addEventListener('click', function(event) {
+                    const navbarList = document.querySelector('.navbar__list');
+                    const toggleBtn = document.querySelector('.navbar__toggle-btn');
+            
+                    if (!navbarList.contains(event.target) && !toggleBtn.contains(event.target)) {
+                        navbarList.classList.add('hidden'); 
+                        toggleBtn.innerHTML = "☰"; 
+                    }
+                    });
+            
+                </script>
+    <div class="slider">
+        <div class="controls">
+            <div class="up">
+                <i class="fa fa-chevron-up"></i>
+            </div>
+            <div class="down">
+                <i class="fa fa-chevron-down"></i>
+            </div>
+        </div>
+
+        <div class="wrapper">
+            <div class="left">
+                <div>
+                    <h2>"Поиск затерянного сокровища"</h2>
+                    <p>
+                         В этом квесте дети отправятся в захватывающее приключение в поисках затерянного сокровища, которое спрятано где-то внутри загадочного древнего храма.
+                        Дети собираются перед входом в храм, где встречают загадочного проводника. Он рассказывает им легенду о затерянном сокровище и дарует карту сокровищ. Дети исследуют храм, решая головоломки, преодолевая препятствия и собирая ключи к сундуку с сокровищем.
+                    </p>
+                </div>
+
+                <div>
+                    <h2>"Спасение затерянного дракона"</h2>
+                    <p>
+                    В этом квесте дети отправятся на спасение доброго дракона, попавшего в ловушку злого колдуна в его замке.
+ Дети просыпаются в древнем замке и встречаются с принцессой, которая просит их помочь спасти дракона. Дети должны найти ключи от камеры дракона, решая головоломки и обходя ловушки, чтобы освободить его и заставить колдуна уйти.
+                    </p>
+                </div>
+
+                <div>
+                    <h2>"Загадка древнего леса"</h2>
+                    <p>
+                       В этом квесте дети отправятся в путешествие сквозь древний лес, чтобы раскрыть его тайны и разгадать загадки великого древа мудрости.
+Дети встречаются с древним древом мудрости, которое дает им загадки и задания, чтобы помочь ему восстановить свою силу. Дети исследуют лес, собирая артефакты и решая загадки, чтобы помочь древу восстановиться.
+                    </p>
+                </div>
+
+                <div>
+                    <h2>"Пиратское приключение на острове сокровищ"</h2>
+                    <p>
+                         В этом квесте дети отправляются на пиратский остров, чтобы найти затерянное сокровище пиратского капитана.
+Сценарий: Дети прибывают на остров и встречаются с пиратами, которые делятся с ними картой сокровищ. Дети должны исследовать остров, обходя ловушки, решая головоломки и сражаясь с пиратами, чтобы найти сокровище.
+                    </p>
+                </div>
+
+                <div>
+                    <h2>"Спасение волшебного королевства"</h2>
+                    <p>
+                         В этом квесте дети отправятся в волшебное королевство, чтобы помочь его обитателям восстановить магию, украденную злым чародеем.
+Сценарий: Дети прибывают в королевство и встречаются с королем и королевой, которые просят их помочь восстановить украденную магию. Дети должны собрать ингредиенты для заклинания, решая головоломки и сражаясь с чудовищами, посланными чародеем, чтобы вернуть магию в королевство.
+                    </p>
+                </div>
+            </div>
+            <div class="right">
+                <div>
+                    <img src="1.png"
+                        alt="rome" />
+                </div>
+
+                <div>
+                    <img src="мальчик на батуте.jpg"
+                        alt="amsterdam" />
+                </div>
+
+                <div>
+                    <img src="2.jpg"
+                        alt="istanbul" />
+                </div>
+
+                <div>
+                    <img src="holiday-128.jpg"
+                        alt="paris" />
+                </div>
+
+                <div>
+                    <img src="15.jpg"
+                        alt="london" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        let slider = document.querySelector(".slider");
+        let currentSlide = 0;
+        let totalSlides = slider.querySelectorAll(".wrapper .left > div").length - 1;
+
+        slider.querySelector(".controls .up").addEventListener("click", function () {
+            if (currentSlide == 0) {
+                return;
+            }
+            currentSlide--;
+            slider.querySelector(".wrapper .left div").style.marginTop = `${currentSlide * -100
+                }vh`;
+            slider.querySelector(".wrapper .right div").style.marginTop = `${(totalSlides - currentSlide) * -100
+                }vh`;
+        });
+
+        slider.querySelector(".controls .down").addEventListener("click", function () {
+            if (currentSlide == totalSlides) {
+                return;
+            }
+            currentSlide++;
+            slider.querySelector(".wrapper .left div").style.marginTop = `${currentSlide * -100
+                }vh`;
+            slider.querySelector(".wrapper .right div").style.marginTop = `${(totalSlides - currentSlide) * -100
+                }vh`;
+        });
+    </script>
+</body>
+</html>

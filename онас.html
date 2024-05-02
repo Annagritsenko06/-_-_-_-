@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О нас</title>
+    <link rel="stylesheet" href="общий.css" />
+    <link rel="stylesheet" href="онас.css" />
+    <link rel="stylesheet" href="C:\Users\admin\Documents\уник\курсовой проект\styles_sass\css\styles_sass.css" />
+</head>
+<body>
+    <nav class="navbar">
+      <a href="главная.html" class="header-link"></a>
+
+        <div class="navbar__top">
+        <h1 class="navbar__title">
+          
+          </h1>
+        <button class="navbar__toggle-btn" onclick="toggleNavbar()">-</button>
+        </div>
+        <ul class="navbar__list">
+          <li class="navbar__item"><a href="онас.html">О нас</a></li>
+<li class="navbar__item"><a href="развлеченияя.html">Развлечения</a></li> 
+<li class="navbar__item"><a href="новости.html">Новости</a></li>
+<li class="navbar__item"><a href="фотогалерея.html">Фотогалерея</a></li>
+<li class="navbar__item"><a href="наши_центры.html">Наши центры</a></li>
+<li class="navbar__item"><a href="registrarion.html">Регистрация</a></li> </ul>
+        </nav>
+        <script>
+            function toggleNavbar() {
+                        const navbarList = document.querySelector('.navbar__list');
+                        const toggleBtn = document.querySelector('.navbar__toggle-btn');
+                        navbarList.classList.toggle('hidden');
+            
+                        if (navbarList.classList.contains('hidden')) {
+                            toggleBtn.innerHTML = "☰"; 
+                        } else {
+                            toggleBtn.innerHTML = "-"; 
+                        }
+                    }
+                    document.addEventListener('click', function(event) {
+                    const navbarList = document.querySelector('.navbar__list');
+                    const toggleBtn = document.querySelector('.navbar__toggle-btn');
+            
+                    if (!navbarList.contains(event.target) && !toggleBtn.contains(event.target)) {
+                        navbarList.classList.add('hidden'); 
+                        toggleBtn.innerHTML = "☰"; 
+                    }
+                    });
+            
+                </script>
+        <h1 class="h1" >Добро пожаловать</h1>
+    <div class="container">
+        
+        <p>Добро пожаловать в уникальный мир развлечений и приключений – Центр Развлечений "Лазалки"! Расположенный в живописном пригороде нашего города, "Лазалки" предлагают неповторимый опыт отдыха для всей семьи. Здесь каждый найдет что-то по душе, будь то яркие аттракционы, захватывающие квесты или просто уютное времяпрепровождение в кругу друзей.</p>
+   <p>Наш центр развлечений имеет глубокие корни и богатую историю. Он был основан великим энтузиастом и предпринимателем, Грегорио Лазаль, который мечтал создать место, где каждый мог бы найти радость и вдохновение. С тех пор "Лазалки" стали не просто развлекательным центром, а настоящим символом культуры досуга в нашем регионе.</p>
+   <p>В "Лазалках" предоставляется широкий спектр услуг для самых разных вкусов и предпочтений. От захватывающих аттракционов и тематических квестов до расслабляющих игровых зон и бесподобного кинотеатра – здесь каждый найдет занятие по своему вкусу. Кроме того, наши услуги постоянно обновляются и дополняются, чтобы предложить гостям всегда что-то новое и захватывающее.</p>
+   <p>Наш профессиональный и дружелюбный персонал всегда готов помочь и сделать ваше пребывание в "Лазалках" максимально комфортным и приятным. Мы стремимся к тому, чтобы каждый гость чувствовал себя как дома и уходил от нас с улыбкой на лице и множеством ярких впечатлений.</p>
+   <p>Отзывы наших посетителей – лучшая награда для нас. Мы гордимся тем, что каждый день получаем положительные отзывы о нашем сервисе, атмосфере и разнообразии развлечений. "Лазалки" – это не просто место для проведения досуга, это настоящий оазис веселья и радости, куда каждый приходит снова и снова, чтобы насладиться волшебством нашего центра развлечений.</p>
+    </div>
+        <a href="главная.html" class="a">
+        <div class="arrow">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          </a>
+</body>
+</html

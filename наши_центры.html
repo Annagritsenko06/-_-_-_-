@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="общий.css" />
+    <link rel="stylesheet" href="наши_центры.css" />
+      <title>наши_центры</title>
+</head>
+<body>
+
+  
+    <nav class="navbar">
+      <a href="главная.html" class="header-link"></a>
+        <div class="navbar__top">
+        <h1 class="navbar__title">
+          
+          </h1>
+        <button class="navbar__toggle-btn" onclick="toggleNavbar()">-</button>
+        </div>
+        <ul class="navbar__list">
+          
+          <li class="navbar__item"><a href="онас.html">О нас</a></li>
+<li class="navbar__item"><a href="развлеченияя.html">Развлечения</a></li> 
+<li class="navbar__item"><a href="новости.html">Новости</a></li>
+<li class="navbar__item"><a href="фотогалерея.html">Фотогалерея</a></li>
+<li class="navbar__item"><a href="наши_центры.html">Наши центры</a></li>
+<li class="navbar__item"><a href="registrarion.html">Регистрация</a></li></ul>
+        </nav>
+        <script>
+          function toggleNavbar() {
+                      const navbarList = document.querySelector('.navbar__list');
+                      const toggleBtn = document.querySelector('.navbar__toggle-btn');
+                      navbarList.classList.toggle('hidden');
+          
+                      if (navbarList.classList.contains('hidden')) {
+                          toggleBtn.innerHTML = "☰"; 
+                      } else {
+                          toggleBtn.innerHTML = "-"; 
+                      }
+                  }
+                  document.addEventListener('click', function(event) {
+                  const navbarList = document.querySelector('.navbar__list');
+                  const toggleBtn = document.querySelector('.navbar__toggle-btn');
+          
+                  if (!navbarList.contains(event.target) && !toggleBtn.contains(event.target)) {
+                      navbarList.classList.add('hidden'); 
+                      toggleBtn.innerHTML = "☰"; 
+                  }
+                  });
+          
+              </script>
+        
+        
+        <h1 class="h1">Наши центры</h1>
+        <div class="dostavka">
+          <div class="flex-container">
+           
+          <p class="text"> 
+        
+            г. Минск, пр. Независимости 56 <br/>
+            тел.: +375(33)456-78-12
+            ежедневно с 10:00 до 21:00 <br/>
+
+            вторник с 12:00 до 21:00 <br/></p>
+            <img src="центр1.jpg" class="pochta">
+          </div>
+          <div class="flex-container">
+          <img src="центр2.jpg" class="pochta2">
+          <p class="text">
+         
+           г. Минск, пр. Партизанский 12 <br/>
+           тел.: +375(33)456-78-13   
+           тел.: +375(33)456-78-12
+           ежедневно с 10:00 до 22:00 <br/>
+
+вторник с 12:00 до 22:00 <br/>
+</p>
+        </div>
+        
+          <div class="flex-container">
+          <p id="xmlContent">
+            </p>
+            <script>
+              var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("xmlContent").innerHTML = this.responseText;
+            }
+        };
+        xmlhttp.open("GET", "xxx.xml", true);
+        xmlhttp.send();
+          </script>
+
+         
+          <img src="центр3.jpg" class="pochta3">
+       
+          </div>
+          </div>
+        
+        
+        
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="общий.css" />
+    <link rel="stylesheet" href="новости.css" />
+   
+    <title>новости</title>
+</head>
+
+<body>
+    <nav class="navbar">
+        <a href="главная.html" class="header-link"></a>
+        <div class="navbar__top">
+        <h1 class="navbar__title">
+          
+          </h1>
+        <button class="navbar__toggle-btn" onclick="toggleNavbar()">-</button>
+        </div>
+        <ul class="navbar__list">
+            <li class="navbar__item"><a href="онас.html">О нас</a></li>
+            <li class="navbar__item"><a href="развлеченияя.html">Развлечения</a></li> 
+            <li class="navbar__item"><a href="новости.html">Новости</a></li>
+            <li class="navbar__item"><a href="фотогалерея.html">Фотогалерея</a></li>
+            <li class="navbar__item"><a href="наши_центры.html">Наши центры</a></li>
+            <li class="navbar__item"><a href="registrarion.html">Регистрация</a></li>
+        </ul>
+        </nav>
+        <script>
+            function toggleNavbar() {
+                        const navbarList = document.querySelector('.navbar__list');
+                        const toggleBtn = document.querySelector('.navbar__toggle-btn');
+                        navbarList.classList.toggle('hidden');
+            
+                        if (navbarList.classList.contains('hidden')) {
+                            toggleBtn.innerHTML = "☰"; 
+                        } else {
+                            toggleBtn.innerHTML = "-"; 
+                        }
+                    }
+                    document.addEventListener('click', function(event) {
+                    const navbarList = document.querySelector('.navbar__list');
+                    const toggleBtn = document.querySelector('.navbar__toggle-btn');
+            
+                    if (!navbarList.contains(event.target) && !toggleBtn.contains(event.target)) {
+                        navbarList.classList.add('hidden'); 
+                        toggleBtn.innerHTML = "☰"; 
+                    }
+                    });
+            
+                </script>
+    <div class="timeline-wrapper">
+        <div class="center-line">
+            <a href="#" class="scroll-icon"><i class="fas fa-caret-up"></i></a>
+        </div>
+        <div class="timeline-row timeline-row-1">
+            <section>
+                <i class="icon fas fa-home"></i>
+                <div class="details">
+                    <span class="title">Волшебный карнавал с Лазалками</span>
+                    <span>5 мая 2024 </span>
+                </div>
+                <p>Дети погрузятся в мир волшебства и веселья на увлекательном карнавале, организованном совместно с любимыми персонажами из мультфильмов Lazalki. Гостей ждут интерактивные игры, костюмированный парад, а также мастер-классы по изготовлению масок и волшебных атрибутов.</p>
+                <div class="bottom">
+                    <a href="registrarion.html">забронировать...</a>
+                    <i>Время: с 12:00 до 16:00</i>
+                </div>
+            </section>
+        </div>
+        <div class="timeline-row timeline-row-2">
+            <section>
+                <i class="icon fas fa-star"></i>
+                <div class="details">
+                    <span class="title">Семейный праздник на Лазалка-пляже</span>
+                    <span>29 июня 2024 </span>
+                </div>
+                <p>Для всех желающих приглашаются на семейный пикник на имитации пляжа внутри центра. Гостей ждут веселые конкурсы, игры на песке, а также мастер-классы по созданию песочных замков и разноцветных масок. Также будет устроен небольшой пляжный волейбол для взрослых.</p>
+                <div class="bottom">
+                    <a href="registrarion.html">забронировать...</a>
+                    <i>Время: с 10:00 до 14:00</i>
+                </div>
+            </section>
+        </div>
+        <div class="timeline-row timeline-row-1">
+            <section>
+                <i class="icon fas fa-rocket"></i>
+                <div class="details">
+                    <span class="title">Пиратская вечеринка с Лазалками</span>
+                    <span>17 августа 2024</span>
+                </div>
+                <p>Ребята отправятся в захватывающее путешествие по морям настоящих пиратов. Гостей ждут приключения, тайные карты, сокровища и веселые игры в стиле морских разбоев. Дети смогут также наряжаться в костюмы пиратов и участвовать в конкурсе на лучший образ.</p>
+                <div class="bottom">
+                    <a href="registrarion.html">забронировать...</a>
+                    <i>Время: с 14:00 до 18:00</i>
+                </div>
+            </section>
+        </div>
+        <div class="timeline-row timeline-row-2">
+            <section>
+                <i class="icon fas fa-globe"></i>
+                <div class="details">
+                    <span class="title">День здоровья с Лазалками</span>
+                    <span>7 сентября 2024</span>
+                </div>
+                <p>Специальный день, посвященный здоровому образу жизни и активным играм. В программе мероприятия — спортивные соревнования, занятия йогой для детей, мастер-классы по здоровому питанию и физкультурные мини-показы с участием Лазалок.</p>
+                <div class="bottom">
+                    <a href="registrarion.html">забронировать...</a>
+                    <i>Время: с 10:00 до 15:00</i>
+                </div>
+            </section>
+        </div>
+        <div class="timeline-row timeline-row-1">
+            <section>
+                <i class="icon fas fa-paper-plane"></i>
+                <div class="details">
+                    <span class="title">Хэллоуинский вечер с Лазалкам</span>
+                    <span>31 октября 2024</span>
+                </div>
+                <p>Незабываемый Хэллоуин в стиле Lazalki с призраками, чудовищами и магией! Гостей ждут ужасающие мероприятия, включая костюмированный парад, ведение художника-гримёра, и интерактивные мастер-классы по изготовлению тыквенных фонариков.</p>
+                <div class="bottom">
+                    <a href="registrarion.html">забронировать...</a>
+                    <i>Время: с 17:00 до 20:00</i>
+                </div>
+            </section>
+        </div>
+        <div class="timeline-row timeline-row-2">
+            <section>
+                <i class="icon fas fa-map-marker-alt"></i>
+                <div class="details">
+                    <span class="title">Рождественский бал с Лазалками</span>
+                    <span>25 декабря 2024</span>
+                </div>
+                <p>Праздничный Рождественский бал, где дети смогут встретить самого Деда Мороза и Снегурочку в компании Лазалков. В программе — танцы, игры, конкурсы, а также мастер-классы по созданию новогодних поделок и украшений.</p>
+                <div class="bottom">
+                    <a href="registrarion.html">забронировать...</a>
+                    <i>Время: с 14:00 до 18:00</i>
+                </div>
+            </section>
+        </div>
+    </div>    
+</body>
+</html>
