@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="общий.css" />
     <link rel="stylesheet" href="наши_центры.css" />
       <title>наши_центры</title>
+
 </head>
 <body>
 
@@ -59,10 +60,14 @@
           <p class="text"> 
         
             г. Минск, пр. Независимости 56 <br/>
-            тел.: +375(33)456-78-12
+           
             ежедневно с 10:00 до 21:00 <br/>
-
-            вторник с 12:00 до 21:00 <br/></p>
+           
+            вторник с 12:00 до 21:00 
+            <p class="text" id="xmlConten"></p>
+            <p class="tex" id="xmlConten"></p>
+           </p>
+          
             <img src="центр1.jpg" class="pochta">
           </div>
           <div class="flex-container">
@@ -70,35 +75,40 @@
           <p class="text">
          
            г. Минск, пр. Партизанский 12 <br/>
-           тел.: +375(33)456-78-13   
-           тел.: +375(33)456-78-12
+           
            ежедневно с 10:00 до 22:00 <br/>
 
-вторник с 12:00 до 22:00 <br/>
+           вторник с 12:00 до 22:00 
+           <p class="text" id="xmlConten"></p>
+           <p class="text" id="xmlConten"></p>
 </p>
-        </div>
-        
-          <div class="flex-container">
-          <p id="xmlContent">
-            </p>
-            <script>
-              var xmlhttp = new XMLHttpRequest();
-        xmlhttp.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
-                document.getElementById("xmlContent").innerHTML = this.responseText;
-            }
-        };
-        xmlhttp.open("GET", "xxx.xml", true);
-        xmlhttp.send();
-          </script>
 
-         
+        </div>
+          <div class="flex-container">
+          <p class="xmlContent">
+    г. Минск, ул. Красника<br/>
+    ежедневно с 10:00 до 22:00<br/>
+суббота с 13:00 до 22:00</p>
+<p id="xmlConten" class="xmlContent"></p>
+<p id="xmlConten" class="xmlContent"></p>
           <img src="центр3.jpg" class="pochta3">
        
           </div>
           </div>
         
-        
+          <script>
+            fetch('xxx.xml')
+ .then(res => res.text())
+ .then(xmlString => {
+   const parser = new DOMParser();
+   const xmlDoc = parser.parseFromString(xmlString, 'text/xml');
+   const br = xmlDoc.getElementsByTagName('number');
+   const links = document.querySelectorAll('#xmlConten');
+   for(let i = 0; i < 6; i++){
+       links[i].textContent = br[i].textContent;
+   }
+ })
+         </script>
         
 </body>
 </html>
